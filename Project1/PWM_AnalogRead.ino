@@ -1,5 +1,5 @@
 //INITAL VARIABLES
-int sampleSize=10;
+int sampleSize=200; // Range is best kept between 50 and 500
 int long sensorValue1;
 float total=0;
 float vrms; 
@@ -23,7 +23,7 @@ float analogReadRMS(){
   sensorValue1 = analogRead(A0);
   total= total + sensorValue1*sensorValue1*(5.0/1023)*(5.0/1023);
   }
-  rms=sqrt(total/sampleSize);
+  rms=sqrt(total/(sampleSize-1));
   total=0;
   return rms;
 }
@@ -36,7 +36,7 @@ float analogReadAVG(){
     sensorValue1 = analogRead(A0);
     total= total + sensorValue1*(5.0/1023);
   }
-  avg = total/sampleSize;
+  avg = total/(sampleSize-1);
   total = 0;
   return avg;
   }
