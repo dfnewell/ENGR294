@@ -4,6 +4,7 @@ In this repository you will find the code and breadboard layouts to successfully
 Before using this code you must install the Arduino IDE and configure it to work with your board. For more information on how to do this see: https://www.arduino.cc/en/Guide/ArduinoUno
 
 Detailed instructions are provided via the class's ilearn page. Below is a quick summary of the project codes for your reference.
+
 CODE 1: PWM_AnalogRead
 - Understanding PWM and AnalogRead()
 
